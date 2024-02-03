@@ -1,0 +1,179 @@
+.body-container {
+    height: 400px;
+    display: grid;
+    width: 900px;
+    justify-content: center;        /*to make children divs centered into main div horizontally*/
+    grid-template-columns: 200px 200px 50px 200px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px;
+    margin-left: auto;
+    margin-right: auto;     /*last 4 properties make div centered*/
+    font: 1em sans-serif;
+    gap: 4px 16px;
+    color: rgb(15, 15, 15);
+    font-weight: 600;
+    border: 1px solid transparent;
+    box-shadow: 2px 2px 5px 4px rgba(64,60,67,.16);
+    
+    
+
+
+    /*to be centered try this option: margin: 0 auto; 
+    or this.........
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    ************************
+    */
+
+    /* in order to make div container flexible while narrowing from browser..
+    try flex and grid both of them.. */
+}
+
+
+
+.body-container-item-amount {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-column-end: 1;
+    grid-row-end: 3;
+    font-size: 18px;
+    padding-top: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+.body-container-item-to {
+    grid-column-start: 4;
+    grid-row-start: 3;
+    grid-column-end: 4;
+    grid-row-end: 3;
+    font-size: 18px;
+    padding-top: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+#body-container-item-empty {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    grid-column-end: 3;
+    grid-row-end: 3;
+    font-size: 18px;
+    padding-top: 25px;
+}
+.body-container-item-from {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-column-end: 2;
+    grid-row-end: 3;
+    font-size: 18px;
+    padding-top: 25px;
+    font-family: 'Poppins', sans-serif;             /*use "poppins" or fonts*/
+}
+#body-container-item1 {
+    grid-column-start: 1;
+    grid-row-start: 4;
+    grid-column-end: 1;
+    grid-row-end: 4;
+    font-size: 15px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 6px;
+    box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
+    padding: 12px;
+    color: rgb(20, 30, 55);
+    background: none;
+}
+#body-container-item2 {
+    border: 2px solid;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    grid-column-end: 2;
+    grid-row-end: 4;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 6px;
+    box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
+    padding: 12px;
+    color: rgb(20, 30, 55);
+    background: none;
+}
+#body-container-item3 {
+    border: 2px solid;
+    grid-column-start: 3;
+    grid-row-start: 4;
+    grid-column-end: 3;
+    grid-row-end: 4;
+    font-size: 25px;
+    border-radius: 30px;
+    border-color:rgb(196, 195, 194);
+    color:rgb(71, 141, 231);
+    padding-top: 6px;
+    text-align: center;
+}
+#body-container-item4 {
+    grid-column-start: 4;
+    grid-row-start: 4;
+    grid-column-end: 4;
+    grid-row-end: 4;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 6px;
+    box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
+    padding: 12px;
+    color: rgb(20, 30, 55);
+    background: none;
+}
+#convert {
+    grid-column-start: 4;
+    grid-row-start: 7;
+    grid-column-end: 4;
+    grid-row-end: 7;
+    font-size: 16px;
+}
+#exchanged {
+    grid-column-start: 2;
+    grid-row-start: 7;
+    grid-column-end: 4;
+    grid-row-end: 7;
+    font-size: 30px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 6px;
+    box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
+    padding: 12px;
+    color: rgb(20, 30, 55);
+    background: none;
+    text-align: center;
+}
+
+
+#exchange-rates-button {
+    grid-column-start: 1;
+    grid-row-start: 7;
+    grid-column-end: 1;
+    grid-row-end: 7     ;
+    font-size: 16px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 6px;
+    box-shadow: rgba(0, 17, 51, 0.05) 0px 3px 15px;
+    padding: 12px;
+    color: rgb(20, 30, 55);
+    background: none;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .body-container {
+        width: 100%;
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+        grid-template-rows: repeat(9, auto); /* Adjust rows for better mobile display */
+    }
+
+    /* Adjust other styles as needed for smaller screens */
+    #body-container-item1,
+    #body-container-item2,
+    #body-container-item3,
+    #body-container-item4,
+    #convert,
+    #exchanged {
+        width: 100%;
+    }
+}
+
